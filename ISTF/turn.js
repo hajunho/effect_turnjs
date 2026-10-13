@@ -255,7 +255,7 @@ turnMethods = {
 		if (opts.when)
 			for (i in opts.when)
 				if (has(i, opts.when))
-					this.bind(i, opts.when[i]);
+					this.on(i, opts.when[i]);
 
 
 		this.css({position: 'relative', width: opts.width, height: opts.height});
@@ -275,18 +275,18 @@ turnMethods = {
 
 		// Event listeners
 
-		$(this).bind(events.start, function(e) {
+		$(this).on(events.start, function(e) {
 			for (var page in data.pages)
 				if (has(page, data.pages) && flipMethods._eventStart.call(data.pages[page], e)===false)
 					return false;
 		});
 			
-		$(document).bind(events.move, function(e) {
+		$(document).on(events.move, function(e) {
 			for (var page in data.pages)
 				if (has(page, data.pages))
 					flipMethods._eventMove.call(data.pages[page], e);
 		}).
-		bind(events.end, function(e) {
+		on(events.end, function(e) {
 			for (var page in data.pages)
 				if (has(page, data.pages))
 					flipMethods._eventEnd.call(data.pages[page], e);
@@ -431,11 +431,11 @@ turnMethods = {
 									frontGradient: data.opts.gradients
 									}).
 									flip('disable', data.disabled).
-									bind('pressed', turnMethods._pressed).
-									bind('released', turnMethods._released).
-									bind('start', turnMethods._start).
-									bind('end', turnMethods._end).
-									bind('flip', turnMethods._flip);
+									on('pressed', turnMethods._pressed).
+									on('released', turnMethods._released).
+									on('start', turnMethods._start).
+									on('end', turnMethods._end).
+									on('flip', turnMethods._flip);
 		}
 		return data.pages[page];
 	},

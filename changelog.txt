@@ -4,6 +4,14 @@ Github: https://github.com/blasten/turn.js
 Reference: https://github.com/blasten/turn.js/wiki/Reference
 Website: www.turnjs.com 
 ------------------------------------------------------
+effect_turnjs fork - 2026/10/14
+------------------------------------------------------
+
+- Replaced deprecated .bind() with .on() (jQuery 3.x / 4 ready)
+- Demos use jQuery 3.7.1 over HTTPS
+- Rebuilt turn.min.js, synced ISTF/ copies
+
+------------------------------------------------------
 Release 3 - 2012/03/01
 ------------------------------------------------------
 

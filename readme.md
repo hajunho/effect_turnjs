@@ -1,6 +1,26 @@
 
 ![Bilby Stampede](http://turnjs.com/pics/small-turnjs-letters.png)
 
+# effect_turnjs
+
+> **turn.js, modernized.** A maintained fork of [blasten/turn.js](https://github.com/blasten/turn.js) (the HTML5 page-flip effect) that runs on **jQuery 3.x** and is ready for **jQuery 4**.
+
+### What's different in this fork
+
+- Replaced the deprecated `.bind()` with `.on()` (works on jQuery 1.7 through 3.x, and no longer breaks on jQuery 4)
+- Demos now use **jQuery 3.7.1 over HTTPS** (the old `http://code.jquery.com/jquery-1.7.1` links are blocked as mixed content)
+- Rebuilt `turn.min.js` from the updated source (license header preserved)
+- `ISTF/` copies of `turn.js` / `turn.min.js` synced with the root files
+- Verified: `magazine`, `magazine_single` and `bible` demos flip pages with no console errors on jQuery 3.7.1
+
+The turn.js API is unchanged, so existing code keeps working.
+
+> **License:** unchanged from the original - non-commercial use only (see [license.txt](license.txt)). Copyright (c) 2012 Emmanuel Garcia.
+
+Questions or great page-effect ideas? **mynameis@hajunho.com**
+
+* * *
+
 **Get the turn.js 4th release on [turnjs.com](http://www.turnjs.com/)**
 
 
